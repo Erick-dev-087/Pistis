@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-50: #FDFBF7;
+  --color-gold-100: #FBF4E4;
+  --color-gold-200: #F5E4BE;
+  --color-gold-300: #EBD094;
+  --color-gold-400: #E6CA65;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #C59B4B;
+  --color-gold-700: #9C7830;
+  --color-gold-800: #72561F;
+
+  --color-navy-700: #1F385C;
+  --color-navy-800: #15263F;
+  --color-navy-900: #0C1829;
+  --color-navy-950: #08111D;
+
+  --color-canvas: #FAF8F5;
+  --color-linen: #F3EFEA;
+  --color-botanical: #2E5A44;
+  --color-wine: #4A1525;
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-script: var(--font-caveat), cursive;
+
+  --shadow-culinary: 0 10px 30px -10px rgba(12, 24, 41, 0.08);
+  --shadow-culinary-hover: 0 20px 40px -15px rgba(212, 175, 55, 0.28);
+  --shadow-gold-glow: 0 0 25px -4px rgba(212, 175, 55, 0.38);
+  --shadow-gold-floating: 0 8px 30px rgba(197, 155, 75, 0.35);
+}
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #0C1829;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C59B4B;
+}
+
+/* Shimmer gold gradient animation */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5E4BE 50%, #C59B4B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #C59B4B 0%, #D4AF37 50%, #E6CA65 100%);
+}
+
+.navy-gradient-bg {
+  background: linear-gradient(145deg, #08111D 0%, #0C1829 60%, #15263F 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.glass-dark {
+  background: rgba(8, 17, 29, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
